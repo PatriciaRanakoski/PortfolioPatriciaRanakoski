@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+header{
+    background-color: white;
+    padding: 20px;
+
+}
+
+body{
+    background-color: rgba(66, 105, 232, 0.632);
+}
+
+header > h1{
+    color: #25272e;
+    text-align: center;
+}
+
+.title-bar{
+    display: flex;
+    align-items: center;
+}
+
+.favicon{
+    margin-right: 15px;
+}
+
+.score-board{
+    margin: 20px auto;
+    border: 3px solid white;
+    width: 200px;
+    /* height: 80px; */
+    color: white;
+    font-size: 46px;
+    padding: 15px 20px;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+}
+
+/* i {
+    height: 100px;
+    width: 100px;
+    color:white;
+    font-size: large;
+} */
+
+#rock{
+    color: #fff;
+    
+}
+
+.badge{
+    background-color: #e2584d;
+    color: white;
+    font-size: 14px;
+    padding: 2px 10px;
+}
+
+#user-label{
+    position: absolute;
+    top: 30px;
+    left: -25px;
+}
+
+#computer-label{
+    position: absolute;
+    top: 30px;
+    right: -30px;
+} 
+
+.draw{
+    font-size: 40px;
+    color: white;
+}
+
+.draw > p{
+    text-align: center;
+    font-weight: bold;
+}
+
+.result{
+    font-size: 40px;
+    color: white;
+}
+
+.result > p{
+    text-align: center;
+    font-weight: bold;
+}
+
+.choices{
+    margin: 50px 0;
+    text-align: center;
+    flex-direction: row;
+
+}
+ .choice{
+     display:inline-block;
+     border: 4px solid white;
+     border-radius: 50%;
+     padding: 10px;
+     margin: 0 20px;
+     transition: all 0.3s ease;
+ }
+.choice:hover{
+    cursor: pointer;
+    background-color: white;
+}
+
+.action-message{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.green-glow{
+    border: 4px solid #4dcc7d;
+    box-shadow: 0 0 10px #31b43a;
+}
+
+.red-glow{
+    border: 4px solid #fc121b;
+    box-shadow: 0 0 10px #d01115;
+}
+
+.grey-glow{
+    border: 4px solid #464647;
+    box-shadow: 0 0 10px #25292b;
+}
+
+.reset-game{
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    background-color:#4e7cf1;
+    text-align:center;
+    transition: all 0.2s;
+    }
+    a.reset-game:hover{
+    background-color:#4066c6;
+    }
+    @media all and (max-width:30em){
+    a.reset-game{
+    display:block;
+    margin:0.2em auto;
+    }
+}
+
+.reset-button-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

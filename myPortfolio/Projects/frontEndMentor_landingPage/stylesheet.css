@@ -1,0 +1,711 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600;900&family=Fraunces:wght@700;900&display=swap');
+/* font-family: 'Barlow', sans-serif;
+font-family: 'Fraunces', serif; */
+
+:root {
+    /* Primary */
+    --Soft-red: hsl(7, 99%, 70%);
+    --Yellow: hsl(51, 100%, 49%);
+    --Dark-desaturated-cyan: hsl(167, 40%, 24%); /* (graphic design text) */
+    --Dark-blue: hsl(198, 62%, 26%); /* (photography text) */
+    --Dark-moderate-cyan: hsl(168, 34%, 41%); /* (footer) */
+
+    /* Neutral */
+    --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --Dark-grayish-blue: hsl(232, 10%, 55%);
+    --Grayish-blue: hsl(210, 4%, 67%);
+    --White: hsl(0, 0%, 100%);
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@keyframes animateArrow {
+    from {
+        margin-top: 0px;
+    }
+
+    to {
+        margin-top: 50px;
+    }
+}
+
+.top-content {
+    background-image: url(images/mobile/image-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    min-height: 143vw;
+    position: relative;
+}
+
+.content-padding {
+    padding: 25px;
+}
+
+#navigation > h1 {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 40px;
+    letter-spacing: 6px;
+    line-height: 1.2;
+    margin-bottom: 50px;
+}
+
+header {
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+    margin-bottom: 6em;
+}
+
+header > h1 {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+header > img {
+    margin-left: auto;
+}
+
+.triangle {
+    display: none;
+    position: absolute;
+    top: -12%;
+    left: 69%;
+    width: 0;
+    height: 0;
+    border-bottom: 120px solid white;
+    border-left: 101px solid transparent;
+}
+
+.top-nav {
+    display: none;
+}
+
+.top-nav li {
+    margin: 30px;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+#contact {
+    background-color: var(--Yellow);
+    border-radius: 25px;
+    font-family: 'Fraunces', serif;
+    padding: 15px 21px;
+    text-decoration: none;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+/* .top-nav li {
+    margin: 2em;
+    text-decoration: none;
+    line-height: 1.7;
+    font-size: 17px;
+} */
+
+.top-nav li a {
+    text-decoration: none;
+    color: var(--Dark-grayish-blue);
+}
+
+.displayBlock {
+    display: block;
+}
+
+.setOpacity {
+    opacity: 0.5;
+}
+
+.displayTopNav {
+    position: absolute;
+    min-width: 87vw;
+    min-height: 79vw;
+    background-color: white;
+    top: 20%;
+    text-align: center;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+}
+
+.arrow > img {
+    animation: animateArrow 1100ms infinite;
+    animation-direction: alternate-reverse;
+}
+
+/* ================= EGG =============== */
+.egg {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.egg-content {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.egg-content > .content-padding > h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+.egg-content > .content-padding > p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 2em;
+    color: var(--Dark-grayish-blue);
+}
+
+.egg-content > .content-padding > h2 {
+    position: relative;
+    margin-bottom: 2em;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    z-index: 1;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+.egg-content > .content-padding > h2::before {
+    content: "";
+    position: absolute;
+    width: 7em;
+    height: 7px;
+    background-color: var(--Yellow);
+    opacity: 0.5;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(35%);
+}
+
+.egg-content > .content-padding > h2:hover {
+    cursor: pointer;
+}
+
+.egg-content > .content-padding > h2:hover::before {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.egg-image {
+    background-image: url(images/mobile/image-transform.jpg);
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    min-height: 83vw;
+}
+
+/* ============= Stand out ============ */
+.standout {
+    display: flex;
+    flex-direction: column;
+}
+
+.standout-image {
+    background-image: url(images/mobile/image-stand-out.jpg);
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    min-height: 53vh;
+}
+
+.standout-content {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.standout-content > .content-padding > h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+.standout-content > .content-padding > p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 2em;
+    color: var(--Dark-grayish-blue);
+}
+
+.standout-content > .content-padding > h2 {
+    position: relative;
+    margin-bottom: 2em;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    z-index: 1;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+.standout-content > .content-padding > h2::before {
+    content: "";
+    position: absolute;
+    width: 7em;
+    height: 7px;
+    background-color: var(--Soft-red);
+    opacity: 0.5;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(35%);
+}
+
+.standout-content > .content-padding > h2:hover {
+    cursor: pointer;
+}
+
+.standout-content > .content-padding > h2:hover::before {
+    cursor: pointer;
+    opacity: 1;
+}
+
+/* ============ Graphic design and Photography section ======= */
+.art-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.graphic-design {
+    background-image: url(images/mobile/image-graphic-design.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-basis: 50%;
+}
+
+.graphic-design > .content-padding > h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 2em;
+    margin-bottom: 1em;
+    margin-top: 12em;
+    color: var(--Dark-desaturated-cyan);
+}
+
+.graphic-design > .content-padding > p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 2em;
+    color: var(--Dark-desaturated-cyan);
+}
+
+.photography {
+    background-image: url(images/mobile/image-photography.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-basis: 50%;
+}
+
+.photography > .content-padding > h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 2em;
+    margin-bottom: 1em;
+    margin-top: 12em;
+    color: var(--Dark-blue);
+}
+
+.photography .content-padding > p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 2em;
+    color: var(--Dark-blue);
+}
+
+/* ============ TESTIMONIAL SECTION ================ */
+.client-testimonials {
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+.client-testimonials > h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 4px;
+    margin-top: 4em;
+    margin-bottom: 1em;
+}
+
+.emily > .content-padding > img,
+.thomas > .content-padding > img,
+.jennie > .content-padding > img {
+    border-radius: 50%;
+    width: 4em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.emily > .content-padding > p, .thomas > .content-padding > p, .jennie > .content-padding > p {
+    color: var(--Very-dark-grayish-blue);
+    font-family: 'Barlow', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 2em;
+}
+
+.profile > h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1em;
+    margin-bottom: 1em;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+.profile > p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    color: var(--Grayish-blue);
+}
+
+/* =========== Image Bottom ========== */
+.bottom-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-image {
+    display: flex;
+    flex-direction: row;
+}
+
+.bot-image {
+    display: flex;
+    flex-direction: row;
+}
+
+.top-image > div, .bot-image > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-basis: 50%;
+    min-height: 32vh;
+}
+
+.image-1 {
+    background-image: url(images/mobile/image-gallery-milkbottles.jpg);
+}
+
+.image-2 {
+    background-image: url(images/mobile/image-gallery-orange.jpg);
+}
+
+.image-3 {
+    background-image: url(images/mobile/image-gallery-cone.jpg);
+}
+
+.image-4 {
+    background-image: url(images/mobile/image-gallery-sugar-cubes.jpg);
+}
+
+/* ================ FOOTER =============== */
+footer {
+    font-family: 'Barlow', sans-serif;
+    background-color: hsl(168deg 50% 60%);
+    text-align: center;
+    color: var(--Dark-desaturated-cyan);
+}
+
+footer h1 {
+    font-weight: 900;
+    font-size: 2em;
+    margin-top: 1em;
+    margin-bottom: 45px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+    margin-bottom: 5em;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--Dark-desaturated-cyan);
+}
+
+.footer-nav a:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.icon-social {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 3em;
+}
+
+.icon-image:hover {
+    cursor: pointer;
+    fill: white;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+span{
+    color:blue;
+}
+
+@media (min-width: 768px) {
+    .content-padding {
+        padding: 35px;
+    }
+
+    header {
+        margin-bottom: 8em;
+    }
+}
+
+@media (min-width: 992px) {
+    .content-padding {
+        padding: 35px;
+    }
+
+    header {
+        margin-bottom: 8em;
+    }
+
+    #navigation > h1 {
+        margin-bottom: 70px;
+    }
+
+    .top-content {
+        background-image: url(images/desktop/image-header.jpg);
+        min-height: 55vw;
+    }
+
+    header > h1 {
+        font-size: 2em;
+        font-weight: 900;
+    }
+
+    header > img {
+        display: none;
+    }
+
+    .top-nav {
+        display: flex;
+        gap: 35px;
+        margin-left: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 17px;
+    }
+
+    .top-nav li {
+        margin: 0px;
+        line-height: 1.8;
+        font-size: 17px;
+    }
+
+    .top-nav li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+    }
+
+    #contact {
+        color: var(--Very-dark-desaturated-blue);
+        font-family: 'Fraunces', serif;
+        background-color: white;
+        border-radius: 25px;
+        padding: 15px 21px;
+    }
+
+    #contact:hover {
+        background-color: rgba(255, 255, 255, 0.24);
+        color: white;
+        transition: 0.3s;
+    }
+
+    .egg {
+        flex-direction: row;
+    }
+
+    .egg-content {
+        flex-basis: 50%;
+    }
+    
+    .egg-content > .content-padding, .standout-content > .content-padding {
+        text-align: left;
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-top: 10%;
+    }
+
+    .egg-content > .content-padding > h1,
+    .standout-content > .content-padding > h1 {
+        margin-top: 1em;
+    }
+
+    .egg-image {
+        background-image: url(images/desktop/image-transform.jpg);
+        flex-basis: 50%;
+        min-height: 41vw;
+    }
+
+    .standout {
+        flex-direction: row;
+    }
+
+    .standout-image {
+        background-image: url(images/desktop/image-stand-out.jpg);
+        flex-basis: 50%;
+        min-height: 41vw;
+    }
+
+    .art-section {
+        flex-direction: row;
+    }
+
+    .graphic-design {
+        background-image: url(images/desktop/image-graphic-design.jpg);
+    }
+
+    .photography {
+        background-image: url(images/desktop/image-photography.jpg);
+    }
+
+    .graphic-design > .content-padding,
+    .photography > .content-padding {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .client-testimonials > h1 {
+        color: var(--Grayish-blue);
+        font-size: 20px;
+        margin-top: 8em;
+        margin-bottom: 3em;
+    }
+    
+    .testi-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+
+    .bottom-content {
+        flex-direction: row;
+    }
+
+    .top-image {
+        flex-basis: 50%;
+    }
+
+    .bot-image {
+        flex-basis: 50%;
+    }
+
+    .top-image > div, .bot-image > div {
+        min-height: 31vw;
+    }
+
+    .image-1 {
+        background-image: url(images/desktop/image-gallery-milkbottles.jpg);
+    }
+
+    .image-2 {
+        background-image: url(images/desktop/image-gallery-orange.jpg);
+    }
+
+    .image-3 {
+        background-image: url(images/desktop/image-gallery-cone.jpg);
+    }
+
+    .image-4 {
+        background-image: url(images/desktop/image-gallery-sugarcubes.jpg);
+    }
+
+    .emily > .content-padding,
+    .jennie > .content-padding,
+    .thomas > .content-padding {
+        padding: 10px;
+    }
+
+    .emily > .content-padding > img,
+    .thomas > .content-padding > img,
+    .jennie > .content-padding > img {
+        margin-bottom: 3em;
+    }
+
+    .emily > .content-padding > p,
+    .thomas > .content-padding > p,
+    .jennie > .content-padding > p {
+        margin-bottom: 4em;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .egg-content > .content-padding,
+    .standout-content > .content-padding {
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-top: 20%;
+    }
+}
