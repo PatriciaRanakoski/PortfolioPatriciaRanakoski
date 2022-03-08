@@ -19,7 +19,7 @@
 
     $header= "reply-to: $visitor_email \r\n";
 
-    mail($to, $email_subject, $email_body, $header);
+    mail($to, $email_subject, $email_body. $header);
 
     header("Location: index.html")
 
